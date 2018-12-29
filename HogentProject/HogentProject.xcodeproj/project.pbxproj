@@ -15,6 +15,8 @@
 		C70ED6E421D76DCE00DA7D30 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6E321D76DCE00DA7D30 /* QuestionViewController.swift */; };
 		C70ED6E621D76DE900DA7D30 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6E521D76DE900DA7D30 /* ResultsViewController.swift */; };
 		C70ED6E821D7742800DA7D30 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6E721D7742800DA7D30 /* QuestionData.swift */; };
+		C70ED6EE21D7C9D600DA7D30 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6ED21D7C9D600DA7D30 /* Question.swift */; };
+		C70ED6F021D7CE7C00DA7D30 /* ResponsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6EF21D7CE7C00DA7D30 /* ResponsType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C70ED6E321D76DCE00DA7D30 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		C70ED6E521D76DE900DA7D30 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		C70ED6E721D7742800DA7D30 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		C70ED6ED21D7C9D600DA7D30 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		C70ED6EF21D7CE7C00DA7D30 /* ResponsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,9 @@
 		C70ED6C521D767DB00DA7D30 = {
 			isa = PBXGroup;
 			children = (
+				C70ED6D821D767DD00DA7D30 /* Assets.xcassets */,
+				C70ED6EC21D7C9A800DA7D30 /* View Controllers */,
+				C70ED6EB21D7C98400DA7D30 /* Model */,
 				C70ED6D021D767DB00DA7D30 /* HogentProject */,
 				C70ED6CF21D767DB00DA7D30 /* Products */,
 			);
@@ -61,16 +68,31 @@
 			isa = PBXGroup;
 			children = (
 				C70ED6D121D767DB00DA7D30 /* AppDelegate.swift */,
-				C70ED6D321D767DB00DA7D30 /* IntroductionViewController.swift */,
 				C70ED6D521D767DB00DA7D30 /* Main.storyboard */,
-				C70ED6E721D7742800DA7D30 /* QuestionData.swift */,
-				C70ED6E321D76DCE00DA7D30 /* QuestionViewController.swift */,
-				C70ED6E521D76DE900DA7D30 /* ResultsViewController.swift */,
-				C70ED6D821D767DD00DA7D30 /* Assets.xcassets */,
-				C70ED6DA21D767DD00DA7D30 /* LaunchScreen.storyboard */,
 				C70ED6DD21D767DD00DA7D30 /* Info.plist */,
+				C70ED6DA21D767DD00DA7D30 /* LaunchScreen.storyboard */,
 			);
 			path = HogentProject;
+			sourceTree = "<group>";
+		};
+		C70ED6EB21D7C98400DA7D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C70ED6ED21D7C9D600DA7D30 /* Question.swift */,
+				C70ED6E721D7742800DA7D30 /* QuestionData.swift */,
+				C70ED6EF21D7CE7C00DA7D30 /* ResponsType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C70ED6EC21D7C9A800DA7D30 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C70ED6E321D76DCE00DA7D30 /* QuestionViewController.swift */,
+				C70ED6D321D767DB00DA7D30 /* IntroductionViewController.swift */,
+				C70ED6E521D76DE900DA7D30 /* ResultsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +169,8 @@
 				C70ED6D421D767DB00DA7D30 /* IntroductionViewController.swift in Sources */,
 				C70ED6D221D767DB00DA7D30 /* AppDelegate.swift in Sources */,
 				C70ED6E821D7742800DA7D30 /* QuestionData.swift in Sources */,
+				C70ED6F021D7CE7C00DA7D30 /* ResponsType.swift in Sources */,
+				C70ED6EE21D7C9D600DA7D30 /* Question.swift in Sources */,
 				C70ED6E421D76DCE00DA7D30 /* QuestionViewController.swift in Sources */,
 				C70ED6E621D76DE900DA7D30 /* ResultsViewController.swift in Sources */,
 			);

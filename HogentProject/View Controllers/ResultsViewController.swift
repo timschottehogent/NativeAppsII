@@ -21,8 +21,7 @@ class ResultsViewController: UIViewController {
     }
     
     func calculateResult(){
-        var frequencyOfAnswers: [AnimalType: Int] = [:]
-        let responseTypes = responses.map{ $0.type}
+        
     }
     
 
