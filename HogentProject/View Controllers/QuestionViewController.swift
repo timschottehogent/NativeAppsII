@@ -37,6 +37,7 @@ class QuestionViewController: UIViewController {
     
     
     var questionIndex = 0
+    var questions = [Question]()
     var answersChosen: [Answer] = []
     
     override func viewDidLoad() {

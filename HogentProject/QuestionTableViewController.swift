@@ -10,27 +10,16 @@ import UIKit
 
 class QuestionTableViewController: UITableViewController {
     
-    var questions: [Question] = [
-        Question(text: "Hoeveel is 1+1 ",
-                 type: .single,
-                 answers: [
-                    Answer (text: "2", score: 1),
-                    Answer (text: "3", score: 0),
-                    Answer (text: "4", score: 0),
-                    Answer (text: "5", score: 0)
-            ]),
-        Question(text: "Getallen deelbaar door 2",
-                 type: .multiple,
-                 answers: [
-                    Answer (text: "4", score: 1),
-                    Answer (text: "3", score: 0),
-                    Answer (text: "2", score: 1),
-                    Answer (text: "1", score: 0)
-            ]),
-        ]
+    var questions = [Question]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let savedQuestions = Question.loadFromFile(){
+            questions = savedQuestions
+        } else{
+            questions = Question.loadSampleData()
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
