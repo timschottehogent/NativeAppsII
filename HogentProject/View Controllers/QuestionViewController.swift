@@ -57,6 +57,14 @@ class QuestionViewController: UIViewController {
             questions = Question.loadSampleData()
         }
         
+        if(questions.isEmpty){
+            questions = Question.loadSampleData()
+            Question.saveToFile(questions: questions)
+            let alert = UIAlertController(title: "No questions in file", message: "No questions in your local file, loading sample questions", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+        
         navigationItem.title = "Question #\(questionIndex + 1)"
         
         let currentQuestion = questions[questionIndex]
