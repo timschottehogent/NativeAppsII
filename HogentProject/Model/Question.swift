@@ -56,7 +56,7 @@ class Question: CustomStringConvertible, Equatable, Codable{
     
     static func loadSampleData() -> [Question]{
         let questions: [Question] = [
-            Question(text: "Hoeveel is 11+1 ",
+            Question(text: "Hoeveel is 1+1 ",
                      type: .single,
                      answers: [
                         Answer (text: "2", score: 1),
@@ -72,30 +72,22 @@ class Question: CustomStringConvertible, Equatable, Codable{
                         Answer (text: "2", score: 1),
                         Answer (text: "1", score: 0)
                 ]),
-            Question(text: "Hoeveel is 1+1 ",
+            Question(text: "Hoeveel is 2+2 ",
                      type: .single,
                      answers: [
-                        Answer (text: "2", score: 1),
+                        Answer (text: "4", score: 1),
                         Answer (text: "3", score: 0),
-                        Answer (text: "4", score: 0),
+                        Answer (text: "1", score: 0),
                         Answer (text: "5", score: 0)
                 ]),
             ]
         return questions
     }
+  
     
-    
-    
-    enum ResponseType: String, Codable{
-        case single, multiple
-    }
-    
-    
-    
-    
-    
-    
-    
+}
+enum ResponseType: String, Codable{
+    case single, multiple
 }
 
 
@@ -109,5 +101,10 @@ struct Answer: CustomStringConvertible, Equatable, Codable{
     
     var description: String{
         return "Answer(text: \(text), type: \(score))"
+    }
+    
+    init(text: String, score: Int){
+        self.text = text
+        self.score = score
     }
 }

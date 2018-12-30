@@ -21,10 +21,6 @@ class QuestionTableViewController: UITableViewController {
             questions = Question.loadSampleData()
         }
     }
-    @IBAction func mainMenuButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -69,4 +65,9 @@ class QuestionTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+    @IBAction func saveQuestionListToFile(_ sender: Any) {
+        Question.saveToFile(questions: questions)
+    }
+    
 }

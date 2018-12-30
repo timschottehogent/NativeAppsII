@@ -14,7 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func unwindToMain(segue:UIStoryboardSegue) { }
 
 
+    @IBAction func reloadSampleData(_ sender: Any) {
+        Question.saveToFile(questions: Question.loadSampleData())
+    }
+    
 }
 

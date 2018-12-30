@@ -30,8 +30,7 @@ class ResultsViewController: UIViewController {
         }
         return result
     }
-
-    @IBAction func backToMain(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func goBackToMain(_ sender: Any) {
+        performSegue(withIdentifier: "unwindSegueToMain", sender: self)
     }
 }
