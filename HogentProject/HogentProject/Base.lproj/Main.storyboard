@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i2j-Vj-GCm">
-                                <rect key="frame" x="81" y="299.5" width="213.5" height="68.5"/>
+                                <rect key="frame" x="81" y="284.5" width="213.5" height="98.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAP Hybris test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkW-Ta-fzf">
                                         <rect key="frame" x="0.0" y="0.0" width="213.5" height="38.5"/>
@@ -32,6 +32,13 @@
                                         <state key="normal" title="Begin"/>
                                         <connections>
                                             <segue destination="g57-mB-GQI" kind="show" id="neZ-u1-3ux"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CP-e3-gIO">
+                                        <rect key="frame" x="0.0" y="68.5" width="213.5" height="30"/>
+                                        <state key="normal" title="View all questions"/>
+                                        <connections>
+                                            <segue destination="QV3-j7-ksl" kind="show" id="wOw-8a-sxj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -57,6 +64,67 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="Ndh-jP-JPz">
+            <objects>
+                <tableViewController id="mps-6W-bc0" customClass="QuestionTableViewController" customModule="HogentProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PHP-S9-FGd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" textLabel="inc-MV-Ct7" detailTextLabel="02M-c6-L7k" style="IBUITableViewCellStyleSubtitle" id="F8J-Yo-0fb" customClass="QuestionTableViewCell" customModule="HogentProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F8J-Yo-0fb" id="K5g-WP-h8f">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="inc-MV-Ct7">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="02M-c6-L7k">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mps-6W-bc0" id="F8K-ZD-fmf"/>
+                            <outlet property="delegate" destination="mps-6W-bc0" id="DJG-s1-X1l"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="Yjk-qY-cJl">
+                        <barButtonItem key="leftBarButtonItem" title="Stop" id="Fr0-Vh-Vo8">
+                            <connections>
+                                <action selector="stopButton:" destination="mps-6W-bc0" id="NtE-5I-aUY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="nJN-lM-J3F" userLabel="Main">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GOf-ZP-aGP">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Main"/>
+                            </button>
+                            <connections>
+                                <action selector="mainMenuButton:" destination="mps-6W-bc0" id="E0P-f7-Llp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VRZ-6O-SR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="925"/>
+        </scene>
         <!--Question View Controller-->
         <scene sceneID="Ux9-M3-yoh">
             <objects>
@@ -69,7 +137,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RmO-g7-oDf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="452.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="454.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if8-Mf-uuf">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="38.5"/>
@@ -141,6 +209,7 @@
                                                         <state key="normal" title="Submit your answer"/>
                                                         <connections>
                                                             <action selector="mmultipleAnswerButtonPressed" destination="RRx-93-U5o" eventType="touchUpInside" id="emn-F2-HF1"/>
+                                                            <action selector="multipleAnswerButtonPressed" destination="RRx-93-U5o" eventType="touchUpInside" id="x4t-km-Z0Z"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -169,7 +238,15 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-bG-Xpo">
+                                                <rect key="frame" x="0.0" y="452.5" width="375" height="2"/>
+                                            </progressView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="jbi-bG-Xpo" firstAttribute="leading" secondItem="RmO-g7-oDf" secondAttribute="leading" id="8GN-RJ-6Ca"/>
+                                            <constraint firstAttribute="trailing" secondItem="jbi-bG-Xpo" secondAttribute="trailing" id="E3M-gt-Ug2"/>
+                                            <constraint firstAttribute="bottom" secondItem="jbi-bG-Xpo" secondAttribute="bottom" id="NFy-c6-8hK"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -190,7 +267,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lQp-9p-uuh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bwH-7v-Auj"/>
+                    <navigationItem key="navigationItem" id="bwH-7v-Auj">
+                        <barButtonItem key="leftBarButtonItem" title="Stop" id="GgA-Up-zMR">
+                            <connections>
+                                <action selector="backButton:" destination="RRx-93-U5o" id="HyH-HN-5LM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="multiLabel1" destination="b3N-xK-znD" id="A2P-o7-n9L"/>
                         <outlet property="multiLabel2" destination="o07-M1-SLV" id="MC0-P6-JiR"/>
@@ -202,6 +285,8 @@
                         <outlet property="multiSwitch4" destination="VKl-Gj-SZG" id="BS1-DL-Mnq"/>
                         <outlet property="multipleStackView" destination="gtF-co-yKZ" id="P93-n8-Jjj"/>
                         <outlet property="questionLabel" destination="if8-Mf-uuf" id="LGN-sj-GBk"/>
+                        <outlet property="questionProgressView" destination="jbi-bG-Xpo" id="lXM-oe-rtu"/>
+                        <outlet property="scrollView" destination="ffs-mq-UIy" id="bK0-G6-X6X"/>
                         <outlet property="singleButton1" destination="jLg-VE-jru" id="oPU-xl-SQS"/>
                         <outlet property="singleButton2" destination="B34-to-rkt" id="yuA-ln-5En"/>
                         <outlet property="singleButton3" destination="ofL-DV-976" id="wcy-yG-1nf"/>
@@ -272,6 +357,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwe-f4-Fcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.79999999999995" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kjb-ID-zvn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QV3-j7-ksl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I3a-gg-OKQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mps-6W-bc0" kind="relationship" relationship="rootViewController" id="vU3-Os-ZKc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIK-SV-ME1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="926"/>
         </scene>
     </scenes>
 </document>

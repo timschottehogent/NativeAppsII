@@ -16,6 +16,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var singleButton3: UIButton!
     @IBOutlet weak var singleButton4: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     @IBOutlet weak var multipleStackView: UIStackView!
@@ -29,6 +30,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var multiSwitch4: UISwitch!
     
     
+
     @IBOutlet weak var questionProgressView: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -71,6 +73,12 @@ class QuestionViewController: UIViewController {
         singleButton4.setTitle(answers[3].text, for: .normal)
     }
     
+    @IBAction func backtoMainButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+
+
+
+    }
     func updateMultipleStack(using answers: [Answer]){
         multipleStackView.isHidden = false
         multiSwitch1.isOn = false
@@ -99,6 +107,7 @@ class QuestionViewController: UIViewController {
             break
         }
         nextQuestion()
+        
     }
     
     
@@ -123,7 +132,7 @@ class QuestionViewController: UIViewController {
     
     func nextQuestion(){
         questionIndex += 1
-        
+        scrollView.setContentOffset(.zero, animated: false)
         if questionIndex < questions.count{
             updateUi()
         } else{
