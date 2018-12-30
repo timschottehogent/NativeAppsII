@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i2j-Vj-GCm">
-                                <rect key="frame" x="81" y="284.5" width="213.5" height="98.5"/>
+                                <rect key="frame" x="81" y="269.5" width="213.5" height="128.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAP Hybris test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkW-Ta-fzf">
                                         <rect key="frame" x="0.0" y="0.0" width="213.5" height="38.5"/>
@@ -39,6 +39,13 @@
                                         <state key="normal" title="View all questions"/>
                                         <connections>
                                             <segue destination="QV3-j7-ksl" kind="show" id="wOw-8a-sxj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xiw-P6-cJl">
+                                        <rect key="frame" x="0.0" y="98.5" width="213.5" height="30"/>
+                                        <state key="normal" title="Numbers API"/>
+                                        <connections>
+                                            <segue destination="dnM-zC-6Bp" kind="show" id="xuZ-6P-Drd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -339,6 +346,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPG-NF-E04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2784.8000000000002" y="129.98500749625188"/>
+        </scene>
+        <!--NumberAPI View Controller-->
+        <scene sceneID="B9D-Rh-ZYl">
+            <objects>
+                <viewController id="dnM-zC-6Bp" customClass="NumberAPIViewController" customModule="HogentProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jHX-WM-lXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmg-Ly-XBg">
+                                <rect key="frame" x="0.0" y="40" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="R3C-Q1-Ea5">
+                                        <barButtonItem key="leftBarButtonItem" title="Main" id="kSz-4g-DZ7">
+                                            <connections>
+                                                <action selector="backToMain:" destination="dnM-zC-6Bp" id="vnN-Vw-Au4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="VqI-QQ-U8D">
+                                <rect key="frame" x="0.0" y="104" width="375" height="97"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqk-nZ-vVA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVX-vA-llI">
+                                        <rect key="frame" x="0.0" y="22.5" width="375" height="22.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="inputNumberBoxChanged:" destination="dnM-zC-6Bp" eventType="editingChanged" id="etH-P2-Tr0"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctw-S6-pGU">
+                                        <rect key="frame" x="0.0" y="47" width="375" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-fC-fI2">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Ppy-fC-fI2" firstAttribute="top" secondItem="ctw-S6-pGU" secondAttribute="top" id="5Bu-3P-qIf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ppy-fC-fI2" secondAttribute="trailing" id="avX-fj-LkK"/>
+                                            <constraint firstItem="Ppy-fC-fI2" firstAttribute="leading" secondItem="ctw-S6-pGU" secondAttribute="leading" id="pXz-ZD-0fS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VqI-QQ-U8D" firstAttribute="top" secondItem="Qmg-Ly-XBg" secondAttribute="bottom" constant="20" id="3Yy-M1-VDR"/>
+                            <constraint firstItem="VqI-QQ-U8D" firstAttribute="leading" secondItem="arT-Qr-vEP" secondAttribute="leading" id="XKj-Uz-QYc"/>
+                            <constraint firstItem="Qmg-Ly-XBg" firstAttribute="leading" secondItem="arT-Qr-vEP" secondAttribute="leading" id="ZEN-OR-PR7"/>
+                            <constraint firstItem="Qmg-Ly-XBg" firstAttribute="top" secondItem="arT-Qr-vEP" secondAttribute="top" constant="20" id="e3f-VQ-7hO"/>
+                            <constraint firstItem="VqI-QQ-U8D" firstAttribute="trailing" secondItem="arT-Qr-vEP" secondAttribute="trailing" id="fmp-Jp-gSJ"/>
+                            <constraint firstItem="Qmg-Ly-XBg" firstAttribute="trailing" secondItem="arT-Qr-vEP" secondAttribute="trailing" id="gTr-EY-JEo"/>
+                            <constraint firstItem="arT-Qr-vEP" firstAttribute="bottom" secondItem="VqI-QQ-U8D" secondAttribute="bottom" constant="466" id="mCe-zH-zn6"/>
+                            <constraint firstItem="VqI-QQ-U8D" firstAttribute="trailing" secondItem="arT-Qr-vEP" secondAttribute="trailing" id="ma3-zP-chx"/>
+                            <constraint firstItem="VqI-QQ-U8D" firstAttribute="top" secondItem="Qmg-Ly-XBg" secondAttribute="bottom" constant="20" id="mnA-8v-one"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="arT-Qr-vEP"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputNumberBox" destination="jVX-vA-llI" id="nqA-by-gFR"/>
+                        <outlet property="resultOutputBox" destination="Ppy-fC-fI2" id="Z0k-gp-mrs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZf-Yk-TcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.79999999999995" y="-625.63718140929541"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zsa-69-PBd">

@@ -42,6 +42,7 @@ class Question: CustomStringConvertible, Equatable, Codable{
         if let retrievedQuestionsData = try? Data(contentsOf: archiveURL), let decodedQuestions = try? propertyListDecoder.decode(Array<Question>.self, from: retrievedQuestionsData){
             return decodedQuestions
         }
+        return nil
     }
     
     static func loadSampleData() -> [Question]{
@@ -73,18 +74,21 @@ class Question: CustomStringConvertible, Equatable, Codable{
     
     
     
-    struct Answer: CustomStringConvertible, Equatable, Codable{
-        var text: String
-        var score: Int
-        
-        static func == (lhs: Answer, rhs: Answer) -> Bool{
-            return lhs.text == rhs.text && lhs.score == rhs.score
-        }
-        
-        var description: String{
-            return "Answer(text: \(text), type: \(score))"
-        }
+    
+    
+    
+}
+
+
+struct Answer: CustomStringConvertible, Equatable, Codable{
+    var text: String
+    var score: Int
+    
+    static func == (lhs: Answer, rhs: Answer) -> Bool{
+        return lhs.text == rhs.text && lhs.score == rhs.score
     }
     
-    
+    var description: String{
+        return "Answer(text: \(text), type: \(score))"
+    }
 }

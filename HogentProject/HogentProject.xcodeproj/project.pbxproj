@@ -19,7 +19,8 @@
 		C70ED6F021D7CE7C00DA7D30 /* ResponsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6EF21D7CE7C00DA7D30 /* ResponsType.swift */; };
 		C7D07D8B21D807180037B05C /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D8A21D807180037B05C /* QuestionTableViewController.swift */; };
 		C7D07D8D21D816E30037B05C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D8C21D816E30037B05C /* QuestionTableViewCell.swift */; };
-		C7D07D9021D8AAB80037B05C /* QuestionDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D8F21D8AAB80037B05C /* QuestionDataController.swift */; };
+		C7D07D9021D8AAB80037B05C /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D8F21D8AAB80037B05C /* NetworkController.swift */; };
+		C7D07D9221D8C2E90037B05C /* NumberAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D9121D8C2E90037B05C /* NumberAPIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,8 @@
 		C70ED6EF21D7CE7C00DA7D30 /* ResponsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsType.swift; sourceTree = "<group>"; };
 		C7D07D8A21D807180037B05C /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionTableViewController.swift; path = ../QuestionTableViewController.swift; sourceTree = "<group>"; };
 		C7D07D8C21D816E30037B05C /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
-		C7D07D8F21D8AAB80037B05C /* QuestionDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDataController.swift; sourceTree = "<group>"; };
+		C7D07D8F21D8AAB80037B05C /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		C7D07D9121D8C2E90037B05C /* NumberAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAPIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				C70ED6D321D767DB00DA7D30 /* IntroductionViewController.swift */,
 				C70ED6E521D76DE900DA7D30 /* ResultsViewController.swift */,
 				C7D07D8A21D807180037B05C /* QuestionTableViewController.swift */,
+				C7D07D9121D8C2E90037B05C /* NumberAPIViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -107,7 +110,7 @@
 		C7D07D8721D7F7AC0037B05C /* Other Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C7D07D8F21D8AAB80037B05C /* QuestionDataController.swift */,
+				C7D07D8F21D8AAB80037B05C /* NetworkController.swift */,
 			);
 			path = "Other Controllers";
 			sourceTree = "<group>";
@@ -199,8 +202,9 @@
 				C70ED6EE21D7C9D600DA7D30 /* Question.swift in Sources */,
 				C7D07D8D21D816E30037B05C /* QuestionTableViewCell.swift in Sources */,
 				C70ED6E421D76DCE00DA7D30 /* QuestionViewController.swift in Sources */,
+				C7D07D9221D8C2E90037B05C /* NumberAPIViewController.swift in Sources */,
 				C70ED6E621D76DE900DA7D30 /* ResultsViewController.swift in Sources */,
-				C7D07D9021D8AAB80037B05C /* QuestionDataController.swift in Sources */,
+				C7D07D9021D8AAB80037B05C /* NetworkController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
