@@ -14,13 +14,12 @@
 		C70ED6DC21D767DD00DA7D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70ED6DA21D767DD00DA7D30 /* LaunchScreen.storyboard */; };
 		C70ED6E421D76DCE00DA7D30 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6E321D76DCE00DA7D30 /* QuestionViewController.swift */; };
 		C70ED6E621D76DE900DA7D30 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6E521D76DE900DA7D30 /* ResultsViewController.swift */; };
-		C70ED6E821D7742800DA7D30 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6E721D7742800DA7D30 /* QuestionData.swift */; };
 		C70ED6EE21D7C9D600DA7D30 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6ED21D7C9D600DA7D30 /* Question.swift */; };
-		C70ED6F021D7CE7C00DA7D30 /* ResponsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70ED6EF21D7CE7C00DA7D30 /* ResponsType.swift */; };
 		C7D07D8B21D807180037B05C /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D8A21D807180037B05C /* QuestionTableViewController.swift */; };
 		C7D07D8D21D816E30037B05C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D8C21D816E30037B05C /* QuestionTableViewCell.swift */; };
 		C7D07D9021D8AAB80037B05C /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D8F21D8AAB80037B05C /* NetworkController.swift */; };
 		C7D07D9221D8C2E90037B05C /* NumberAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D9121D8C2E90037B05C /* NumberAPIViewController.swift */; };
+		C7D07D9421D8F1B90037B05C /* AddQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07D9321D8F1B90037B05C /* AddQuestionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +32,12 @@
 		C70ED6DD21D767DD00DA7D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C70ED6E321D76DCE00DA7D30 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		C70ED6E521D76DE900DA7D30 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		C70ED6E721D7742800DA7D30 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		C70ED6ED21D7C9D600DA7D30 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		C70ED6EF21D7CE7C00DA7D30 /* ResponsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsType.swift; sourceTree = "<group>"; };
 		C7D07D8A21D807180037B05C /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionTableViewController.swift; path = ../QuestionTableViewController.swift; sourceTree = "<group>"; };
 		C7D07D8C21D816E30037B05C /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		C7D07D8F21D8AAB80037B05C /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		C7D07D9121D8C2E90037B05C /* NumberAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAPIViewController.swift; sourceTree = "<group>"; };
+		C7D07D9321D8F1B90037B05C /* AddQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				C70ED6ED21D7C9D600DA7D30 /* Question.swift */,
-				C70ED6E721D7742800DA7D30 /* QuestionData.swift */,
-				C70ED6EF21D7CE7C00DA7D30 /* ResponsType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +99,7 @@
 				C70ED6E521D76DE900DA7D30 /* ResultsViewController.swift */,
 				C7D07D8A21D807180037B05C /* QuestionTableViewController.swift */,
 				C7D07D9121D8C2E90037B05C /* NumberAPIViewController.swift */,
+				C7D07D9321D8F1B90037B05C /* AddQuestionTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -197,8 +194,7 @@
 				C70ED6D421D767DB00DA7D30 /* IntroductionViewController.swift in Sources */,
 				C7D07D8B21D807180037B05C /* QuestionTableViewController.swift in Sources */,
 				C70ED6D221D767DB00DA7D30 /* AppDelegate.swift in Sources */,
-				C70ED6E821D7742800DA7D30 /* QuestionData.swift in Sources */,
-				C70ED6F021D7CE7C00DA7D30 /* ResponsType.swift in Sources */,
+				C7D07D9421D8F1B90037B05C /* AddQuestionTableViewController.swift in Sources */,
 				C70ED6EE21D7C9D600DA7D30 /* Question.swift in Sources */,
 				C7D07D8D21D816E30037B05C /* QuestionTableViewCell.swift in Sources */,
 				C70ED6E421D76DCE00DA7D30 /* QuestionViewController.swift in Sources */,

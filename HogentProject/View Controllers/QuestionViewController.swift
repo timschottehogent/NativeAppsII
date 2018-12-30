@@ -51,6 +51,12 @@ class QuestionViewController: UIViewController {
         singleStackView.isHidden = true
         multipleStackView.isHidden = true
         
+        if let savedQuestions = Question.loadFromFile(){
+            questions = savedQuestions
+        } else{
+            questions = Question.loadSampleData()
+        }
+        
         navigationItem.title = "Question #\(questionIndex + 1)"
         
         let currentQuestion = questions[questionIndex]
@@ -64,6 +70,22 @@ class QuestionViewController: UIViewController {
         case .single: updateSingleStack(using: currentAnswers)
         case .multiple: updateMultipleStack(using: currentAnswers)
         }
+    }
+    
+    var maxScore: Int{
+        var total: Int = 0
+        for question in questions{
+            total += question.maxScore
+        }
+        return total
+    }
+    
+    var myScore: Int{
+        var total: Int = 0
+        for answer in answersChosen{
+            total += answer.score
+        }
+        return total
     }
     
     func updateSingleStack(using answers: [Answer]){
@@ -144,8 +166,12 @@ class QuestionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "ResultsSegue"{
             let resultsViewController = segue.destination as! ResultsViewController
-            //resultsViewController.responses = answersChosen
+            resultsViewController.score = myScore
+            resultsViewController.maxScore = maxScore
         }
     }
+    
+    
+    
 
 }

@@ -9,13 +9,29 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-
+    
+    var score: Int = 0
+    var maxScore: Int = 0
+    
+    @IBOutlet weak var resultsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        calculateResult()
+        resultsLabel.text = generateResult
     }
     
-    func calculateResult(){
-        
+    var generateResult: String{
+        var result: String = ""
+        result.append("U behaalde: \(score) op \(maxScore)\n")
+        if((Double(score) / Double(maxScore)) > 0.5){
+            result.append("Proficiat!")
+        }else{
+            result.append("Volgende keer beter")
+        }
+        return result
+    }
+
+    @IBAction func backToMain(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

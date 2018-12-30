@@ -17,6 +17,14 @@ class Question: CustomStringConvertible, Equatable, Codable{
         return "Question(text: \(text), type:\(type), answers: \(answers))"
     }
     
+    var maxScore: Int{
+        var total: Int = 0
+        for answer in answers{
+            total += answer.score
+        }
+        return total
+    }
+    
     static func ==(lhs: Question, rhs: Question) -> Bool{
         return lhs.text == rhs.text && lhs.type == rhs.type && lhs.answers == rhs.answers
     }
@@ -45,9 +53,10 @@ class Question: CustomStringConvertible, Equatable, Codable{
         return nil
     }
     
+    
     static func loadSampleData() -> [Question]{
         let questions: [Question] = [
-            Question(text: "Hoeveel is 1+1 ",
+            Question(text: "Hoeveel is 11+1 ",
                      type: .single,
                      answers: [
                         Answer (text: "2", score: 1),
@@ -63,9 +72,19 @@ class Question: CustomStringConvertible, Equatable, Codable{
                         Answer (text: "2", score: 1),
                         Answer (text: "1", score: 0)
                 ]),
+            Question(text: "Hoeveel is 1+1 ",
+                     type: .single,
+                     answers: [
+                        Answer (text: "2", score: 1),
+                        Answer (text: "3", score: 0),
+                        Answer (text: "4", score: 0),
+                        Answer (text: "5", score: 0)
+                ]),
             ]
         return questions
     }
+    
+    
     
     enum ResponseType: String, Codable{
         case single, multiple
